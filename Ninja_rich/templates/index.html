@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ninja Gold</title>
 </head>
 <body>
+    <form action="/" method="POST"
+    {% csrf_token %}
+
     <div class=gold>
         <h1>Farm</h1>
         <p>(Earn 10-20 gold)</p>
@@ -25,7 +28,7 @@
     <div class=gold>
             <h1>Casino</h1>
             <p>(Earn or loose 0-50 gold)</p>
-            <button>Find Goldz!</button>
+            <button>Find Gold!</button>
     </div>
 </body>
 </html>

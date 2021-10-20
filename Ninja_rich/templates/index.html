@@ -7,36 +7,47 @@
     <title>Ninja Gold</title>
 </head>
 <body>
-    <form action="process_money" method="POST">
-    {% csrf_token %}
     <h2>Current gold:</h2>
-
         <p> {{ gold }} </p>
 
-    <div class=gold>
-        <h1>Farm</h1>
-        <p>(Earn 10-20 gold)</p>
-        <button>Find Gold!</button>
-        <input type='hidden' name='farm'> 
-    </div>
-    <div class=gold>
-        <h1>Cave</h1>
-        <p>(Earn 5-10 gold)</p>
-        <button>Find Gold!</button>
-        <input type='hidden' name='cave'>
-    </div>
-    <div class=gold>
-        <h1>House</h1>
-        <p>(Earn 2-5 gold)</p>
-        <button>Find Gold!</button>
-        <input type='hidden' name='house'>
-    </div>
-    <div class=gold>
-            <h1>Casino</h1>
-            <p>(Earn or loose 0-50 gold)</p>
+    <form action="process_money" method="POST">
+        {% csrf_token %}
+        <div class=gold>
+            <h1>Farm</h1>
+            <p>(Earn 10-20 gold)</p>
             <button>Find Gold!</button>
-            <input type='hidden' name='casino'>
-    </div>
+            <input type='hidden' name='farm'> 
+        </div>
+    </form>
+
+    <form action="process_money" method="POST">
+        {% csrf_token %}
+        <div class=gold>
+            <h1>Cave</h1>
+            <p>(Earn 5-10 gold)</p>
+            <button>Find Gold!</button>
+            <input type='hidden' name='cave'>
+        </div>
+    </form>
+
+    <form action="process_money" method="POST">
+        {% csrf_token %}
+        <div class=gold>
+            <h1>House</h1>
+            <p>(Earn 2-5 gold)</p>
+            <button>Find Gold!</button>
+            <input type='hidden' name='house'>
+        </div>
+    </form>
+
+    <form action="process_money" method="POST">
+        {% csrf_token %}
+        <div class=gold>
+                <h1>Casino</h1>
+                <p>(Earn or loose 0-50 gold)</p>
+                <button>Find Gold!</button>
+                <input type='hidden' name='casino'>
+        </div>
     </form>
 </body>
 </html>

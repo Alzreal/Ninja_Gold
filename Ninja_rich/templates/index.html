@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Current gold:</h2>
-        <p> {{ gold }} </p>
+        <p> {{ request.session.get_gold }} </p>
 
     <form action="process_money" method="POST">
         {% csrf_token %}
@@ -48,6 +48,7 @@
                 <button>Find Gold!</button>
                 <input type='hidden' name='casino'>
         </div>
+        <p>Your Ninja recieved {{request.session.gold}} gold from * on {{date}}</p>
     </form>
 </body>
 </html>

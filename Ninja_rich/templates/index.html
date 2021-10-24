@@ -48,7 +48,11 @@
                 <button>Find Gold!</button>
                 <input type='hidden' name='casino'>
         </div>
-        <p>Your Ninja recieved {{request.session.gold}} gold from * on {{date}}</p>
+        <br>
+        {% for item in request.session.log %}
+            {{ item }}
+            <br>
+        {% endfor %}
     </form>
 </body>
 </html>

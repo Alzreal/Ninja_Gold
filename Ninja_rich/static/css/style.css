@@ -1,17 +1,15 @@
-* {
+*{
     box-sizing: border-box;
-    margin: 0px;
     padding: 0px;
-    font-family: "Times New Roman", Times, serif;
+    margin: 0px;
 }
 
 .wrapper {
-    background-image: radial-gradient(rgb(44, 42, 42), rgb(61, 51, 197));
+    background-image: radial-gradient(rgb(44, 42, 42), rgb(89, 100, 105));
     height: 1000px;
 }
 
 .gold_count {
-    /* background-color: lightslategrey; */
     display: flex;
     padding-top: 30px;
     flex-direction: column;
@@ -23,15 +21,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(173, 131, 24);
     border: 2px solid gold;
     padding: 5px;
+    margin-top: 10px;
     border-radius: 10px;
     height: 50px;
     width: 70px;
 }
 
 .boxes{
-    /* background-color: lightslategrey; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,13 +61,11 @@
 }
 
 .activity {
-    /* background-color: lightslategrey; */
     display: flex;
     justify-content: center;
 }
 
 .newbutton {
-    /* background-color: lightslategrey; */
     display: flex;
     justify-content: center;
     align-items: center;

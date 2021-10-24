@@ -15,17 +15,29 @@ def process_money(request):
             request.session['gold']=random.randint(10, 20)
             request.session['get_gold']+=request.session['gold']
             request.session['log'].append(
-                f"Your ninja recieved {request.session['gold']} gold from the farm on {request.session['date']}"
+                f"Your ninja received {request.session['gold']} gold from the farm on {request.session['date']}"
             )
         if 'cave' in request.POST:
             request.session['gold']=random.randint(5, 10)
             request.session['get_gold']+=request.session['gold']
+            request.session['log'].append(
+                f"Your ninja received {request.session['gold']} gold from the cave on {request.session['date']}"
+            )
         if 'house' in request.POST:
             request.session['gold']=random.randint(2, 5)
             request.session['get_gold']+=request.session['gold']
+            request.session['log'].append(
+                f"Your ninja received {request.session['gold']} gold from the house on {request.session['date']}"
+            )
         if 'casino' in request.POST:
             request.session['gold']=random.randint(-50, 50)
             request.session['get_gold']+=request.session['gold']
-        
+            request.session['log'].append(
+                f"Your ninja received {request.session['gold']} gold from the farm on {request.session['date']}"
+            )
 
+    return redirect('/')
+
+def newgame(request):
+    request.session.flush()
     return redirect('/')

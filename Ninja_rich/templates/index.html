@@ -5,54 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h2>Current gold:</h2>
-        <p> {{ request.session.get_gold }} </p>
-
-    <form action="process_money" method="POST">
-        {% csrf_token %}
-        <div class=gold>
-            <h1>Farm</h1>
-            <p>(Earn 10-20 gold)</p>
-            <button>Find Gold!</button>
-            <input type='hidden' name='farm'> 
-        </div>
-    </form>
-
-    <form action="process_money" method="POST">
-        {% csrf_token %}
-        <div class=gold>
-            <h1>Cave</h1>
-            <p>(Earn 5-10 gold)</p>
-            <button>Find Gold!</button>
-            <input type='hidden' name='cave'>
-        </div>
-    </form>
-
-    <form action="process_money" method="POST">
-        {% csrf_token %}
-        <div class=gold>
-            <h1>House</h1>
-            <p>(Earn 2-5 gold)</p>
-            <button>Find Gold!</button>
-            <input type='hidden' name='house'>
-        </div>
-    </form>
-
-    <form action="process_money" method="POST">
-        {% csrf_token %}
-        <div class=gold>
-                <h1>Casino</h1>
-                <p>(Earn or loose 0-50 gold)</p>
-                <button>Find Gold!</button>
-                <input type='hidden' name='casino'>
-        </div>
-        <br>
-        {% for item in request.session.log %}
-            {{ item }}
+    <div class=wrapper>
+        <div class=gold_count>
+            <h1>Ninja Gold Game</h1>
             <br>
-        {% endfor %}
+            <h1>Current gold:</h1>
+                <h2> {{ request.session.get_gold }} </h2>
+        </div>
+
+        <div class=boxes>
+            <form action="process_money" method="POST">
+                {% csrf_token %}
+                <div class=gold>
+                    <h1>Farm</h1>
+                    <h3>(Earn 10-20 gold)</h3>
+                    <button>Find Gold!</button>
+                    <input type='hidden' name='farm'> 
+                </div>
+            </form>
+
+            <form action="process_money" method="POST">
+                {% csrf_token %}
+                <div class=gold>
+                    <h1>Cave</h1>
+                    <h3>(Earn 5-10 gold)</h3>
+                    <button>Find Gold!</button>
+                    <input type='hidden' name='cave'>
+                </div>
+            </form>
+
+            <form action="process_money" method="POST">
+                {% csrf_token %}
+                <div class=gold>
+                    <h1>House</h1>
+                    <h3>(Earn 2-5 gold)</h3>
+                    <button>Find Gold!</button>
+                    <input type='hidden' name='house'>
+                </div>
+            </form>
+
+            <form action="process_money" method="POST">
+                {% csrf_token %}
+                <div class=gold>
+                        <h1>Casino</h1>
+                        <h3>(Earn or loose 0-50 gold)</h3>
+                        <button>Find Gold!</button>
+                        <input type='hidden' name='casino'>
+                </div>
+        </div>
+            <div class=activity>
+            <textarea name="" id="" cols="100" rows="10">
+                {% for item in request.session.log %}
+                {{ item }}
+            {% endfor %}
+            </textarea>
+        </div>
+        <div class=newbutton>
+            <button><a href="/newgame">Start a new game</a></button>
+        </div>
+    </div>
     </form>
 </body>
 </html>

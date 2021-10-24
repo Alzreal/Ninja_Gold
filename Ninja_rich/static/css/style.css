@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.wrapper {
+    background-image: radial-gradient(rgb(44, 42, 42), rgb(61, 51, 197));
+    height: 1000px;
+}
+
+.gold_count {
+    /* background-color: lightslategrey; */
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    height: 120px
+}
+
+.gold_count h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gold;
+    padding: 5px;
+    border-radius: 10px;
+    height: 50px;
+    width: 70px;
+}
+
+.boxes{
+    /* background-color: lightslategrey; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+}
+
+.gold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 185px;
+    width: 250px;
+    background-image: linear-gradient(rgb(40, 88, 40), green);
+    border-radius: 20px;
+    box-shadow: 8px 8px 4px rgb(46, 45, 45);
+}
+
+.gold button {
+    height: 50px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: gold;
+    border-radius: 20px;
+    box-shadow: 3px 3px 1px rgb(75, 74, 74);
+}
+
+.activity {
+    /* background-color: lightslategrey; */
+    display: flex;
+    justify-content: center;
+}
+
+.newbutton {
+    /* background-color: lightslategrey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newbutton button {
+    height: 60px;
+    width: 190px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: x-large;
+    background-color: goldenrod;
+}
